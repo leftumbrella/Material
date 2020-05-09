@@ -1,11 +1,11 @@
-#include "mainscenes.h"
+#include "startscene.hpp"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainScenes w;
+    StartScene w;
     w.show();
     return a.exec();
 }

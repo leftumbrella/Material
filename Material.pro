@@ -17,13 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainscenes.cpp
+    mypushbutton.cpp \
+    startscene.cpp
 
 HEADERS += \
-    mainscenes.h
+    mypushbutton.hpp \
+    startscene.hpp
 
 FORMS += \
-    mainscenes.ui
+    startscene.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
