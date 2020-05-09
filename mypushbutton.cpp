@@ -12,10 +12,10 @@ MyPushButton::MyPushButton(QWidget *parent,int w,int h)
     setFont(f);
 
 }
-void MyPushButton::enterEvent(QEvent *event){
+void MyPushButton::enterEvent(QEvent *){
     setColorMain(true);
 }
-void MyPushButton::leaveEvent(QEvent *event){
+void MyPushButton::leaveEvent(QEvent *){
     setColorMain(false);
 }
 void MyPushButton::mousePressEvent(QMouseEvent *event){
