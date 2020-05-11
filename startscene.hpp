@@ -2,12 +2,15 @@
 #define STARTSCENE_HPP
 
 #include "mypushbutton.hpp"
+#include "square.hpp"
+#include "drawpointer.hpp"
 #include <QWidget>
 #include <QPainter>
 #include <QDebug>
 #include <QLabel>
 #include <QMessageBox>
 #include <QLineEdit>
+#include <QIntValidator>
 QT_BEGIN_NAMESPACE
 namespace Ui { class StartScene; }
 QT_END_NAMESPACE
@@ -31,10 +34,17 @@ private:
     void resizeEvent(QResizeEvent*);
 
     StartScene::Status _status;
-
+    int _sup_w ;
+    int _sup_h ;
     QLabel * _label_super;
     QLabel * _label_son;
 
-    QLineEdit* _line_edit_w[8];
+    QVector<QPair<QLineEdit*,QLineEdit*>> _line_edit_w;
+
+    MyPushButton* _btn_more[2];
+
+    QVector<Square> _squares;
+
+    const QVector<DrawPointer>& calcPoints(const QVector<Square>& squares);
 };
 #endif // STARTSCENE_HPP
